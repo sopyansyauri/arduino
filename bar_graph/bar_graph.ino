@@ -7,6 +7,7 @@ void setup() {
   for (int thisled = 0; thisled < ledCount; thisled++) {
     pinMode(ledPins[thisled], OUTPUT);
   }
+  Serial.begin(9600);
 
 }
 
@@ -21,5 +22,6 @@ void loop() {
     digitalWrite(ledPins[thisled], LOW);
     }
   }
+  Serial.println(ledLevel);
 
 }
